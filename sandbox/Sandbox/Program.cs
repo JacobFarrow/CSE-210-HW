@@ -13,7 +13,7 @@ class Program
 
         if (Number > 5 || Number < 15)
         {
-            Console.WriteLine($"Your answer was {Number}, which is not in the range I expected");
+            Console.WriteLine($"Your answer was {Number}, which is not in the range I expected.");
         }
 
         else
