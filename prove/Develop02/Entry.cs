@@ -19,4 +19,10 @@ public class Entry
         Console.WriteLine($"Response: {_userResponse}");
         Console.WriteLine();
     }
+
+    public string GetAsFileString()
+    {
+        
+        return $"{_date}|{_prompt}|{_userResponse}";
+    }
 }
