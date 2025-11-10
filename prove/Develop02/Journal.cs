@@ -10,7 +10,7 @@ public class Journal
         _entries = new List<Entry>();
     }
 
-    public void Displayall()
+    public void DisplayAll()
     {
         if (_entries.Count == 0)
         {
@@ -24,7 +24,12 @@ public class Journal
         }
     }
 
-    public void SaveFromFile(string filename);
+    public void AddEntry(Entry newEntry)
+    {
+        _entries.Add(newEntry);
+    }
+
+    public void SaveToFile(string filename)
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
@@ -36,7 +41,7 @@ public class Journal
         Console.WriteLine($"Journal successfully saved to {filename}");
     }
 
-    public void LoadFromFile(string filename);
+    public void LoadFromFile(string filename)
     {
         if (!File.Exists(filename))
         {
